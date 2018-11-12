@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pastelería Don Pepito</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <div id="nav">
+        <div class="logo">
+            <img src="img/logo.jpg" alt="Logo Pastelería" style="width: 70px">
+            <span class="openbtn" onclick="openNav()">&#9776;</span>
+            <div id="menu">
+                <ul>
+                    <li><a href="#" tabindex="1">Inicio</a></li>
+                    <li><a href="#" tabindex="2">Quiénes somos</a></li>
+                    <li><a href="#" tabindex="3" onclick="openModal()">Regístrate</a></li>
+                    <li><a href="#" tabindex="4">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="side-menu">
+            <ul>
+                <li><a href="#" tabindex="-1" class="closebtn" onclick="closeNav()">&times;</a></li>
+                <li><a href="#" tabindex="-1">Inicio</a></li>
+                <li><a href="#" tabindex="-1">Quiénes somos</a></li>
+                <li><a href="#" tabindex="-1" onclick="openModal()">Regístrate</a></li>
+                <li><a href="#" tabindex="-1">Contáctanos</a></li>
+            </ul>
+            <div class="socialmedia">
+                <ul>
+                    <li><a href="#" tabindex="-1"><img src="img/fb.jpg" alt="Facebook"></a></li>
+                    <li><a href="#" tabindex="-1"><img src="img/twitter.jpg" alt="Twitter"></a></li>
+                    <li><a href="#" tabindex="-1"><img src="img/instagram.jpg" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="container">
+        <div class="carousel">
+            <div class="mySlides">
+                <img src="img/istock-873169784-1534367009.jpg" >
+                <div class="text">
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, suscipit?</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta dolores deleniti modi ipsa
+                        quibusdam magnam?</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/MOTION+CROIX.png" >
+                <div class="text">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet hic quae dolorum?</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/renard-bakery-bakkerij-03-17-img-8353-edit-web_5.jpg" >
+                <div class="text">
+                    <h2>Lorem ipsum dolor sit amet.</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, quas.</p>
+                </div>
+            </div>
+
+            <a class="prev" tabindex="5" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" tabindex="6" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div class="info">
+            <div class="rescue">
+                <div class="photo">
+                    <img src="img/miga_1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Voluptates quisquam, nisi
+                            voluptas dolorum repellat est aliquid exercitationem</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet explicabo ratione beatae nisi
+                        optio enim, amet distinctio illo voluptatem laboriosam, inventore pariatur iste error excepturi
+                        eum debitis et sequi doloremque.</p>
+                </div>
+            </div>
+            <div class="crowfunding">
+                <div class="photo">
+                    <img src="img/imperial-treasure-bakery-08.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa impedit quaerat reiciendis aliquam
+                        nemo consectetur. Dolorem nobis ea molestias explicabo voluptates. Voluptates quisquam, nisi
+                        voluptas dolorum repellat est aliquid exercitationem.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <div id="gallery">
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="closebtn" tabindex="-1" onclick="closeModal()">&times;</span>
+                        <h2>Regístrate</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="validate()" action="#">
+                            <label for="txtCorreo">Correo:</label>
+                            <input type="text" id="txtCorreo" tabindex="0" placeholder="Ingrese correo electronico"
+                                required />
+                            <br>
+                            <label for="txtRut">Rut:</label>
+                            <input type="text" onkeyup="modifyText()" id="txtRut" tabindex="0" maxlength="10"
+                                placeholder="Ingrese Rut sin puntos ni guion" required />
+                            <br>
+                            <label for="txtNombre">Nombre Completo:</label>
+                            <input type="text" id="txtNombre" tabindex="0" placeholder="Ingrese su nombre" required>
+                            <br>
+                            <label for="fechaNac">Fecha de nacimiento:</label>
+                            <input type="date" id="fechaNac" tabindex="0" required max="2001-01-01">
+                            <br>
+                            <label for="txtNumero">Teléfono de contacto:</label>
+                            <input type="number" id="txtNumero" tabindex="0" placeholder="Ingrese su numero de teléfono">
+                            <br>
+                            <label for="txtRegion">Región</label>
+                            <select id="txtRegion" tabindex="0" oninput="selectCity()"></select>
+                            <br>
+                            <label for="txtCity">Ciudad</label>
+                            <select id="txtCity" tabindex="0"></select>
+                            <button class="button" tabindex="0">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img id="wifi" src="img/descarga.jpg"  class="image">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nihil neque minus aliquid
+                        blanditiis maxime!</p>
+                    <button class="button" tabindex="7" onclick="openModal()">Comprar</button>
+                </div>
+            </div>
+            <div class="card">
+                <img id="maya" src="img/choccroissants.jpg"  class="image">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci similique unde facere! Eum,
+                        vero obcaecati!</p>
+                    <button class="button" tabindex="8" onclick="openModal()">Comprar</button>
+
+                </div>
+            </div>
+            <div class="card">
+                <img id="oso" src="img/donuts.jpg"  class="image">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consectetur modi labore
+                        laudantium non voluptatibus..</p>
+                    <button class="button" tabindex="9" onclick="openModal()">Comprar</button>
+
+                </div>
+            </div>
+            <div class="card">
+
+                <img id="luna" src="img/fasdfa.jpg"  class="image">
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam ut cumque culpa illo vero?
+                        Magnam?</p>
+                    <button class="button" tabindex="10" onclick="openModal()">Comprar</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="socialmedia">
+            <ul>
+                <li><a href="#" tabindex="14"><img src="img/fb.jpg" alt="Facebook"></a></li>
+                <li><a href="#" tabindex="15"><img src="img/twitter.jpg" alt="Twitter"></a></li>
+                <li><a href="#" tabindex="16"><img src="img/instagram.jpg" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/slides.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/validarRut.js"></script>
+    <script src="js/citySelector.js"></script>
+</body>
+
+
+</html>
