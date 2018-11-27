@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'misPerris.urls'
+ROOT_URLCONF = 'pasteleria.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'misPerris.wsgi.application'
+WSGI_APPLICATION = 'pasteleria.wsgi.application'
 
 
 # Database
